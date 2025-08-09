@@ -1,2 +1,11 @@
 runs
 wandb
+yolov7/torpedoes_2025_a-1/test/labels/
+
+yolov7/torpedoes_2025_a-1/train/labels/
+
+yolov7/torpedoes_2025_a-1/valid/labels/
+
+yolov7/torpedoes_2025_a-1/
+
+*.url

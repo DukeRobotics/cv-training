@@ -240,7 +240,7 @@ def labels_to_image_weights(labels, nc=80, class_weights=np.ones(80)):
     return image_weights
 
 
-def coco80_to_coco91_class():  # converts 80-index (val2014) to 91-index (paper)
+def coco80_to_coco91_class():  # converts 80-index (#2014) to 91-index (paper)
     # https://tech.amikelive.com/node-718/what-object-categories-labels-are-in-coco-dataset/
     # a = np.loadtxt('data/coco.names', dtype='str', delimiter='\n')
     # b = np.loadtxt('data/coco_paper.names', dtype='str', delimiter='\n')
