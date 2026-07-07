@@ -62,6 +62,7 @@ def train(hyp, opt, device, tb_writer=None, log=False):
     init_seeds(2 + rank)
     with open(opt.data) as f:
         data_dict = yaml.load(f, Loader=yaml.SafeLoader)  # data dict
+        print(data_dict)
     is_coco = opt.data.endswith('coco.yaml')
 
     # Logging- Doing this before checking the dataset. Might update data_dict
@@ -461,7 +462,7 @@ def train(hyp, opt, device, tb_writer=None, log=False):
                         'ema': deepcopy(ema.ema).half(),
                         'updates': ema.updates,
                         'optimizer': optimizer.state_dict(),
-                        'wandb_id': wandb_logger.wandb_run.id if (wandb_logger.wandb and log) else None
+                        'wandb_id': wandb_logger.wandb_run.id if (log and wandb_logger.wandb) else None
                         }
 
                 # Save last, best and delete
